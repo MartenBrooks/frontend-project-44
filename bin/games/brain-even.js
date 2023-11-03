@@ -11,7 +11,7 @@ const userName = greeting();
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 let correctAnswers = 0;
 while (correctAnswers < rounds) {
-  const randomNumber = generateNumber(50);
+  const randomNumber = generateNumber(0, 50);
   const correctAnswer = isEven(randomNumber);
   askQuestion(randomNumber);
   const userAnswer = getAnswer();

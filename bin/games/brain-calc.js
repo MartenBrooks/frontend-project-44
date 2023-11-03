@@ -11,8 +11,8 @@ const operations = ['+', '-', '*'];
 let correctAnswers = 0;
 while (correctAnswers < rounds) {
   let correctAnswer = 0;
-  const number1 = generateNumber(50);
-  const number2 = generateNumber(50);
+  const number1 = generateNumber(0, 50);
+  const number2 = generateNumber(0, 50);
   const operation = operations[generateNumber(operations.length)];
   switch (operation) {
     case '+':

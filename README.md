@@ -10,3 +10,6 @@ https://asciinema.org/a/gm60YpmhDxnkM6sfIP9IP5Ql7
 
 // Asciinema for brain-gcd game
 https://asciinema.org/a/wskeZk1atJDZdWQmpu4seONRk
+
+// Asciinema for brain-progression game
+https://asciinema.org/a/OE3bWP5Q44rc9JcrvBrAQN5nd

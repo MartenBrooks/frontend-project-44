@@ -1,16 +1,22 @@
 #!/usr/bin/env node
-import { greeting, generateNumber, isEven, getAnswer, checkAnswer, askQuestion, changeCount, wrongAnswer, congratulateUser, rounds } from '../../src/index.js';
+import {
+  greeting, generateNumber, getAnswer,
+  checkAnswer, askQuestion, changeCount,
+  wrongAnswer, congratulateUser, rounds,
+} from '../../src/index.js';
+
+const isEven = (number) => (number % 2 === 0 ? 'yes' : 'no');
 
 const userName = greeting();
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
-let rightAnswers = 0;
-while (rightAnswers < rounds) {
+let correctAnswers = 0;
+while (correctAnswers < rounds) {
   const randomNumber = generateNumber(50);
   const correctAnswer = isEven(randomNumber);
   askQuestion(randomNumber);
   const userAnswer = getAnswer();
   if (checkAnswer(userAnswer, correctAnswer)) {
-    rightAnswers = changeCount(rightAnswers);
+    correctAnswers = changeCount(correctAnswers);
   } else {
     wrongAnswer(userName, userAnswer, correctAnswer);
   }

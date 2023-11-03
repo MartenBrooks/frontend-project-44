@@ -2,7 +2,6 @@ import readlineSync from 'readline-sync';
 
 const rounds = 3;
 
-const isEven = (number) => (number % 2 === 0 ? 'yes' : 'no');
 const generateNumber = (max) => Math.floor(Math.random() * max);
 
 const greeting = () => {
@@ -27,7 +26,6 @@ const wrongAnswer = (name, userAnswer, correctAnswer) => {
 const congratulateUser = (name) => console.log(`Congratulations, ${name}!`);
 
 export {
-  isEven,
   generateNumber,
   greeting,
   askQuestion,

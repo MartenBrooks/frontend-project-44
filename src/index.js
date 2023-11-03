@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 
 const rounds = 3;
 
-const generateNumber = (max) => Math.floor(Math.random() * max);
+const generateNumber = (min, max = 0) => Math.floor(Math.random() * (max - min) + min);
 
 const greeting = () => {
   console.log('Welcome to the Brain Games!');

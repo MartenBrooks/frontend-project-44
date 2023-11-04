@@ -24,7 +24,7 @@ const displayProgression = (progression, progressionGap) => {
       resultProgression = `${resultProgression} ${progression[i]}`;
     }
   }
-  return resultProgression;
+  return resultProgression.trim();
 };
 
 const userName = greeting();

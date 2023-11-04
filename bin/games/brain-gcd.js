@@ -6,9 +6,9 @@ import {
 } from '../../src/index.js';
 
 const getGreatestCommonDivisor = (number1, number2) => {
-  const halfMaxNumber = number1 > number2 ? Math.floor(number1 / 2) : Math.floor(number2 / 2);
+  const maxNumber = number1 > number2 ? number1 : number2;
   let greatestCommonDivisor = 0;
-  for (let i = halfMaxNumber; i > 0; i -= 1) {
+  for (let i = maxNumber; i > 0; i -= 1) {
     if (number1 % i === 0 && number2 % i === 0) {
       greatestCommonDivisor = i;
       break;

@@ -20,7 +20,7 @@ const changeCount = (correctAnswers) => {
   return result;
 };
 const wrongAnswer = (name, userAnswer, correctAnswer) => {
-  console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
+  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
   console.log(`Let's try again, ${name}`);
 };
 const congratulateUser = (name) => console.log(`Congratulations, ${name}!`);

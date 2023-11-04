@@ -23,7 +23,11 @@ const wrongAnswer = (name, userAnswer, correctAnswer) => {
   console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
   console.log(`Let's try again, ${name}!`);
 };
-const congratulateUser = (name) => console.log(`Congratulations, ${name}!`);
+const endGame = (name, correctAnswers) => {
+  if (correctAnswers === rounds) {
+    console.log(`Congratulations, ${name}!`);
+  }
+};
 
 export {
   generateNumber,
@@ -33,6 +37,6 @@ export {
   checkAnswer,
   wrongAnswer,
   changeCount,
-  congratulateUser,
+  endGame,
   rounds,
 };

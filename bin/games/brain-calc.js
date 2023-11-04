@@ -2,7 +2,7 @@
 import {
   greeting, generateNumber, getAnswer,
   checkAnswer, askQuestion, changeCount,
-  wrongAnswer, congratulateUser, rounds,
+  wrongAnswer, endGame, rounds,
 } from '../../src/index.js';
 
 const userName = greeting();
@@ -36,6 +36,4 @@ while (correctAnswers < rounds) {
     break;
   }
 }
-if (correctAnswers === rounds) {
-  congratulateUser(userName);
-}
+endGame(userName, correctAnswers);

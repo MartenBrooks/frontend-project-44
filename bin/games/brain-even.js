@@ -2,7 +2,7 @@
 import {
   greeting, generateNumber, getAnswer,
   checkAnswer, askQuestion, changeCount,
-  wrongAnswer, congratulateUser, rounds,
+  wrongAnswer, rounds, endGame,
 } from '../../src/index.js';
 
 const isEven = (number) => (number % 2 === 0 ? 'yes' : 'no');
@@ -22,6 +22,4 @@ while (correctAnswers < rounds) {
     break;
   }
 }
-if (correctAnswers === rounds) {
-  congratulateUser(userName);
-}
+endGame(userName, correctAnswers);

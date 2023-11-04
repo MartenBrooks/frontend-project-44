@@ -19,6 +19,9 @@ while (correctAnswers < rounds) {
     correctAnswers = changeCount(correctAnswers);
   } else {
     wrongAnswer(userName, userAnswer, correctAnswer);
+    break;
   }
 }
-congratulateUser(userName);
+if (correctAnswers === rounds) {
+  congratulateUser(userName);
+}

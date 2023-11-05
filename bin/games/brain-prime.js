@@ -10,7 +10,7 @@ console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 let correctAnswers = 0;
 while (correctAnswers < rounds) {
   const number = generateNumber(1, 100);
-  const correctAnswer = isPrime(number);
+  const correctAnswer = isPrime(number) ? 'yes' : 'no';
   askQuestion(number);
   const userAnswer = getAnswer();
   if (checkAnswer(userAnswer, correctAnswer)) {

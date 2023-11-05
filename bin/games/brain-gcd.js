@@ -2,20 +2,8 @@
 import {
   greeting, generateNumber, getAnswer,
   checkAnswer, askQuestion, changeCount,
-  wrongAnswer, endGame, rounds,
+  wrongAnswer, endGame, rounds, getGreatestCommonDivisor,
 } from '../../src/index.js';
-
-const getGreatestCommonDivisor = (number1, number2) => {
-  const maxNumber = number1 > number2 ? number1 : number2;
-  let greatestCommonDivisor = 0;
-  for (let i = maxNumber; i > 0; i -= 1) {
-    if (number1 % i === 0 && number2 % i === 0) {
-      greatestCommonDivisor = i;
-      break;
-    }
-  }
-  return greatestCommonDivisor;
-};
 
 const userName = greeting();
 console.log('Find the greatest common divisor of given numbers.');

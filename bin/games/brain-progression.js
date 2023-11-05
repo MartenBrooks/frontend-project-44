@@ -2,30 +2,8 @@
 import {
   greeting, generateNumber, getAnswer,
   checkAnswer, askQuestion, changeCount,
-  wrongAnswer, endGame, rounds,
+  wrongAnswer, endGame, rounds, generateProgression, makeProgressionWithGap,
 } from '../../src/index.js';
-
-const progressionGenerator = (startNumber, progressionLength, progressionStep) => {
-  const progressionArray = [startNumber];
-  let nextNumber = startNumber;
-  for (let i = 0; i < progressionLength; i += 1) {
-    nextNumber += progressionStep;
-    progressionArray.push(nextNumber);
-  }
-  return progressionArray;
-};
-
-const displayProgression = (progression, progressionGap) => {
-  let resultProgression = '';
-  for (let i = 0; i < progression.length; i += 1) {
-    if (i === progressionGap) {
-      resultProgression = `${resultProgression} ..`;
-    } else {
-      resultProgression = `${resultProgression} ${progression[i]}`;
-    }
-  }
-  return resultProgression.trim();
-};
 
 const userName = greeting();
 console.log('What number is missing in the progression?');
@@ -35,9 +13,9 @@ while (correctAnswers < rounds) {
   const progressionLength = generateNumber(5, 10);
   const progressionStep = generateNumber(2, 10);
   const progressionGap = generateNumber(1, progressionLength - 1);
-  const progression = progressionGenerator(startNumber, progressionLength, progressionStep);
+  const progression = generateProgression(startNumber, progressionLength, progressionStep);
   const correctAnswer = progression[progressionGap];
-  const progressionWithGap = displayProgression(progression, progressionGap);
+  const progressionWithGap = makeProgressionWithGap(progression, progressionGap);
   askQuestion(progressionWithGap);
   const userAnswer = getAnswer();
   if (checkAnswer(userAnswer, correctAnswer)) {

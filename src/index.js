@@ -94,7 +94,7 @@ const makeProgressionWithGap = (progression, progressionGap) => {
 const isPrime = (number) => {
   for (let i = Math.floor(number / 2); i >= 2; i -= 1) {
     if (number % i === 0) {
-      return 'no';
+      return false;
     }
   }
   return number > 1;

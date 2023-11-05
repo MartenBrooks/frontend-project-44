@@ -92,15 +92,12 @@ const makeProgressionWithGap = (progression, progressionGap) => {
 
 // brain-prime functions
 const isPrime = (number) => {
-  if ((number % 2 === 0 && number !== 2) || number < 2) {
-    return false;
-  }
   for (let i = Math.floor(number / 2); i >= 2; i -= 1) {
     if (number % i === 0) {
       return false;
     }
   }
-  return true;
+  return number > 1;
 };
 
 export {

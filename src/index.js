@@ -32,7 +32,7 @@ const endGame = (name, correctAnswers) => {
 };
 
 // brain-even functions
-const isEven = (number) => number % 2 === 0;
+const isEven = (number) => (number % 2 === 0 ? 'yes' : 'no');
 
 // brain-calc functions
 const calculate = (number1, number2, operation) => {
@@ -94,10 +94,10 @@ const makeProgressionWithGap = (progression, progressionGap) => {
 const isPrime = (number) => {
   for (let i = Math.floor(number / 2); i >= 2; i -= 1) {
     if (number % i === 0) {
-      return false;
+      return 'no';
     }
   }
-  return number > 1;
+  return number > 1 ? 'yes' : 'no';
 };
 
 export {
